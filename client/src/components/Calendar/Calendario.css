@@ -1,0 +1,4 @@
+/* Calendario.css */
+.react-calendar__tile.highlight {
+	background: #74ec7e !important; /* Verde clarito */
+}
