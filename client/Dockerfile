@@ -1,24 +1,23 @@
-# sintaxis a usar
 # syntax=docker/dockerfile:1
 
-#usa imagen de node mas liviana 1era etapa
-FROM node:current-alpine as build
+# Usa una imagen de Node.js compatible con ARM para la primera etapa
+FROM node:current-alpine AS build
 
-# directorio de trabajo, comandos se ejecutan ahi
+# Establece el directorio de trabajo
 WORKDIR /usr/src/app
 
-# copia pack json e instala las dependencias
+# Copia package.json e instala las dependencias
 COPY package.json package-lock.json ./
 RUN npm install
 
-# copia archivos a workdir y construye la aplicación (react-scripts)
+# Copia los archivos y construye la aplicación (React-scripts)
 COPY . .
 RUN npm run build
 
-# reducir tamaño final sin deps temporales 2nda etapa
+# Usa una imagen de Node.js compatible con ARM para la segunda etapa
 FROM node:current-alpine
 
-# directorio de trabajo
+# Establece el directorio de trabajo
 WORKDIR /usr/src/app
 
 # Copia los archivos de construcción desde la etapa de build

@@ -1,38 +1,38 @@
 # Stage 1: Build
+# Usa una imagen de Node.js compatible con ARM para la etapa de construcción
 FROM node:20 AS build
 
-# Set the working directory
+# Establece el directorio de trabajo
 WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json
+# Copia package.json e instala las dependencias
 COPY package*.json ./
-
-# Install dependencies
 RUN npm install
 
-# Copy the rest of the application code
+# Copia el resto del código de la aplicación
 COPY . .
 
-# Build the application (if needed, for example with TypeScript)
+# Construye la aplicación (si es necesario, por ejemplo, con TypeScript)
 # RUN npm run build
 
 # Stage 2: Runtime
+# Usa una imagen de Node.js compatible con ARM para la etapa de runtime
 FROM node:20-slim
 
-# Set the working directory
+# Establece el directorio de trabajo
 WORKDIR /usr/src/app
 
-# Copy the build output from the previous stage (if there is any)
+# Copia la salida de la construcción desde la etapa anterior (si hay alguna)
 # COPY --from=build /app/build ./build
 
-# Copy application source code
+# Copia el código fuente de la aplicación
 COPY --from=build /usr/src/app .
 
-# Install production dependencies
+# Instala dependencias de producción
 RUN npm install --only=production
 
-# Expose the port the app runs on
+# Exponer el puerto en el que se ejecuta la aplicación
 EXPOSE 8080
 
-# Command to start the application
+# Comando para iniciar la aplicación
 CMD ["npm", "start"]
