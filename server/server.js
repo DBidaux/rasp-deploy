@@ -19,15 +19,14 @@ app.use(
 	cors({
 		origin: [
 			"http://localhost:3000",
-			"http://localhost:8080/*",
 			"http://127.21.0.2:3000",
 			"http://51.254.96.88:3000",
 			"http://cuadrillagolfes.es",
 			"http://www.cuadrillagolfes.es",
 			"https://cuadrillagolfes.es",
 			"https://www.cuadrillagolfes.es",
-			"192.168.1.101",
-			"192.168.1.101:3000",
+			"http://192.168.1.101",
+			"http://192.168.1.101:3000",
 		], // dominio del cliente URL o IP
 		methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
 		credentials: true,
