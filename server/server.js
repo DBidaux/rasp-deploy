@@ -40,7 +40,7 @@ app.use(
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Si queremos que tenga un prefijo /api o algo así
-app.use("/api", require("./routes/routes.js"));
+app.use(require("./routes/routes.js"));
 
 // Conectar o crear la base de datos especificada
 mongoose.connect(process.env.DB_URL);
