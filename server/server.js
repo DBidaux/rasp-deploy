@@ -26,6 +26,8 @@ app.use(
 			"http://www.cuadrillagolfes.es",
 			"https://cuadrillagolfes.es",
 			"https://www.cuadrillagolfes.es",
+			"192.168.1.101",
+			"192.168.1.101:3000",
 		], // dominio del cliente URL o IP
 		methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
 		credentials: true,
