@@ -28,7 +28,6 @@ app.use(
 			"http://192.168.1.101",
 			"http://192.168.1.101:3000",
 			"http://192.168.1.101:8080/*",
-			"https://localhost:8080",
 		], // dominio del cliente URL o IP
 		methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
 		credentials: true,
