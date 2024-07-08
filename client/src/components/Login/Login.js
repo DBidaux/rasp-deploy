@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Cuadrilla from "../../images/Cuadrilla.jpeg";
+import ImageLogin from "../../images/login.jpg";
 import "bootstrap/dist/css/bootstrap.css";
 import API_URL from "../../setttings";
 
@@ -54,7 +54,7 @@ export default function Login() {
 						<img
 							aria-hidden="true"
 							className="object-cover w-full h-full dark:hidden"
-							src={Cuadrilla}
+							src={ImageLogin}
 							alt="Foto cuadrilla"
 						/>
 					</div>
