@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "./NavBar/NavBar";
 import Footer from "./Footer/Footer";
 
-export default function Fiestas() {
+export default function Tricount() {
 	return (
 		<div>
 			<NavBar></NavBar>

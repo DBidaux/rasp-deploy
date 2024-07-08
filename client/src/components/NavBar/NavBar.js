@@ -22,7 +22,7 @@ function NavBarContent() {
 				</button>
 
 				<a className="navbar-brand" href="/LandingPage">
-					Les Golfes Returns!
+					Planes y facturas
 				</a>
 				<a href="/profile">
 					<img
@@ -42,7 +42,7 @@ function NavBarContent() {
 								data-bs-toggle="dropdown"
 								aria-expanded="false"
 							>
-								A pagar, a pagarrr!
+								Listas compra / Facturas
 							</a>
 							<ul className="dropdown-menu">
 								<li>
@@ -80,8 +80,8 @@ function NavBarContent() {
 							</ul>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="/Fiestas">
-								FIESTAS!
+							<a className="nav-link" href="/Tricount">
+								Tricount
 							</a>
 						</li>
 						<li className="nav-item">

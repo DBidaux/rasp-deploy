@@ -4,7 +4,7 @@ import Login from "../components/Login/Login";
 import ResetPassword from "../components/ResetPassword/ResetPassword";
 import NewAccount from "../components/NewAccount/NewAccount";
 import LandingPage from "../components/LandingPage/LandingPage";
-import Fiestas from "../components/Fiestas";
+import Tricount from "../components/Tricount";
 import ProtectedRoute from "../components/ProtectComponent/Protected.js";
 import ShoppingListHistory from "../components/ShoppingList/ShoppingListHistory.js";
 import ShoppingListInactives from "../components/ShoppingList/ShoppingListInactives.js";
@@ -69,10 +69,10 @@ export default function PageRouter() {
 					}
 				></Route>
 				<Route
-					path="/Fiestas"
+					path="/Tricount"
 					element={
 						<ProtectedRoute>
-							<Fiestas />
+							<Tricount />
 						</ProtectedRoute>
 					}
 				></Route>
