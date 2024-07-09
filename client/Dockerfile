@@ -28,4 +28,4 @@ RUN npm install -g serve
 
 # Expone el puerto y establece el comando por defecto
 EXPOSE 3000
-CMD ["serve", "-s", "build", "-l", "3000"]
+CMD ["serve", "-s", "build", "-l", "15000"]
